@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parcial.MainPage" Title="Formulario Covid" BackgroundColor="LightBlue">
+
+    <StackLayout>
+
+        <StackLayout>
+            <Label Text="Formulario COVID" HorizontalOptions="Center" FontAttributes="Bold" VerticalOptions="Center" TextColor="Black" FontSize="Title"></Label>
+
+            <Label Text="En el siguiente formulario se le solicitará su información para poder mantenerse en contacto y hacer seguimiento de su estado de salud" TextColor="Black" HorizontalOptions="Center"></Label>
+
+            <Label Text="El virus que causa la COVID‑19 se transmite principalmente a través de las gotículas generadas cuando una persona infectada tose, estornuda o espira. Estas gotículas son demasiado pesadas para permanecer suspendidas en el aire y caen rápidamente sobre el suelo o las superficies.&#10;&#10;
+Usted puede infectarse al inhalar el virus si está cerca de una persona con COVID‑19 o si, tras tocar una superficie contaminada, se toca los ojos, la nariz o la boca.&#10;&#10;" TextColor="Black" HorizontalOptions="Center"></Label>
+            
+        </StackLayout>
+
+        <StackLayout>
+            <Label Text="ID"/>
+            <Entry Placeholder="ID"
+                   Keyboard="Numeric"
+                   x:Name="id"/>
+            <Button Text="Buscar"
+                    Clicked="BuscarUno"/>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Label Text="Cedula"/>
+            <Entry Placeholder="Cedula"
+                   Keyboard="Numeric"
+                   x:Name="cedula"/>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Label Text="Nombre"/>
+            <Entry Placeholder="Nombre"
+                   x:Name="nombre"/>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Label Text="Apellido"/>
+            <Entry Placeholder="Apellido"
+                   x:Name="apellido"/>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Label Text="Celular"/>
+            <Entry Placeholder="Celular"
+                   Keyboard="Numeric"
+                   x:Name="celular"/>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Label Text="Email"/>
+            <Entry Placeholder="Email"
+                   x:Name="email"/>
+
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Insertar"
+                        Clicked="Insertar"
+                        Grid.Column="0"/>
+
+
+                <Button Text="Eliminar"
+                        Clicked="Eliminar"
+                        Grid.Column="1"/>
+
+
+                <Button Text="Ver Todos"
+                        Clicked="VerTodos"
+                        Grid.Column="2"/>
+
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

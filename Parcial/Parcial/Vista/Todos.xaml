@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parcial.Vista.Todos"
+             BackgroundColor="LightCyan">
+
+    <StackLayout>
+        <ListView x:Name="Lista"
+                  Header=""
+                  Footer="">
+
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label  Text="Id"
+                                TextColor="Red"
+                                Grid.Column="0"/>
+                        <Label  Text="Cedula"
+                                TextColor="Green"
+                                Grid.Column="1"/>
+                        <Label  Text="Nombre"
+                                TextColor="Green"
+                                Grid.Column="2"/>
+                        <Label  Text="Apellido"
+                                TextColor="Green"
+                                Grid.Column="3"/>
+                        <Label  Text="Celular"
+                                TextColor="Green"
+                                Grid.Column="4"/>
+                        <Label  Text="Email"
+                                TextColor="Green"
+                                Grid.Column="5"/>
+
+
+                    </Grid>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding ID}"
+                                   Grid.Column="0"/>
+
+                            <Label Text="{Binding Cedula}"
+                                   Grid.Column="1"/>
+                            
+                            <Label Text="{Binding Nombre}"
+                                   Grid.Column="2"/>
+                            
+                            <Label Text="{Binding Apellido}"
+                                   Grid.Column="3"/>
+                            
+                            <Label Text="{Binding Celular}"
+                                   Grid.Column="4"/>
+
+                            <Label Text="{Binding Email}"
+                                   Grid.Column="5"/>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation ="Vertical"
+>
+                        <Label Text="Personas registradas"
+                               TextColor="Blue"
+                               HorizontalOptions="Center"/>
+
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
